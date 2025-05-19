@@ -56,16 +56,9 @@
 			port {$BACKEND_PORT}
 			refresh 1s
 			versions ipv6
-		}
-		header_up Host {host}
-		header_up X-Real-IP {remote_host}
-		header_up X-Forwarded-For {remote_host}
-		header_up X-Forwarded-Proto {scheme}
-
-		# 🔥 wichtig: WebSocket aktivieren
+		}	
 		transport http {
 			versions h1 h2c
-			websocket
 		}
 		import lb_settings
 		import passive_health_checks
