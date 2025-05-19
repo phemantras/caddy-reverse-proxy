@@ -58,7 +58,7 @@
 			versions ipv6
 		}	
 		transport http {
-			versions h1 h2c
+			versions h1
 		}
 		import lb_settings
 		import passive_health_checks
