@@ -49,7 +49,7 @@
     }
   }
 
-  handle_path /socket/* {
+  handle /socket/* {
     reverse_proxy {
       dynamic a {
         name {$BACKEND_DOMAIN}
